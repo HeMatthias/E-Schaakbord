@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name Alles)(type KiCad)(uri "C:/Program Files/KiCad/share/kicad/library")(options "")(descr ""))
-  (lib (name MAX6955AAX+)(type Legacy)(uri "C:/Users/Matthias/OneDrive - Thomas More/Practice Enterprise 2 (2020-2021)/Libs/MAX6955AAX+/KiCad/MAX6955AAX+.mod")(options "")(descr ""))
-)
