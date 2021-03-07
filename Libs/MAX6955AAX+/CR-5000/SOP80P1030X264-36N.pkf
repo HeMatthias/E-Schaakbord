@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "SOP80P1030X264-36N"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "SOP80P1030X264-36N")
+        (spec "default")
+    )
+)
