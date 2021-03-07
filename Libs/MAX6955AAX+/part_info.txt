@@ -1,0 +1,9 @@
+Manufacturer=Maxim Integrated
+PartNumber=MAX6955AAX+
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=36
+Version=2.1
+Released=2015-05-28 04:17:19
+Downloaded=2021-02-23 10:43:25
+3D=Y
