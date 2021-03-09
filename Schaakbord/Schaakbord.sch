@@ -393,7 +393,7 @@ L Device:C C7
 U 1 1 603C1219
 P 12750 5050
 F 0 "C7" H 12865 5096 50  0000 L CNN
-F 1 "40pF" H 12865 5005 50  0000 L CNN
+F 1 "20pF" H 12865 5005 50  0000 L CNN
 F 2 "" H 12788 4900 50  0001 C CNN
 F 3 "~" H 12750 5050 50  0001 C CNN
 	1    12750 5050
@@ -1644,35 +1644,35 @@ Wire Wire Line
 $Comp
 L SamacSys_Parts:MAX6955AAX+ IC11
 U 1 1 603D7BCA
-P 6500 3300
-F 0 "IC11" H 7150 3565 50  0000 C CNN
-F 1 "MAX6955AAX+" H 7150 3474 50  0000 C CNN
-F 2 "SOP80P1030X264-36N" H 7650 3400 50  0001 L CNN
-F 3 "http://datasheets.maximintegrated.com/en/ds/MAX6955.pdf" H 7650 3300 50  0001 L CNN
-F 4 "MAX6955AAX+, LED Display Driver, 16-Digits 128-Segments, 2.7  5.5 V, 36-Pin SSOP" H 7650 3200 50  0001 L CNN "Description"
-F 5 "2.64" H 7650 3100 50  0001 L CNN "Height"
-F 6 "700-MAX6955AAX" H 7650 3000 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX6955AAX%2b/?qs=1THa7WoU59HHiplILEoAzQ%3D%3D" H 7650 2900 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Maxim Integrated" H 7650 2800 50  0001 L CNN "Manufacturer_Name"
-F 9 "MAX6955AAX+" H 7650 2700 50  0001 L CNN "Manufacturer_Part_Number"
-	1    6500 3300
+P 5850 3300
+F 0 "IC11" H 6500 3565 50  0000 C CNN
+F 1 "MAX6955AAX+" H 6500 3474 50  0000 C CNN
+F 2 "SOP80P1030X264-36N" H 7000 3400 50  0001 L CNN
+F 3 "http://datasheets.maximintegrated.com/en/ds/MAX6955.pdf" H 7000 3300 50  0001 L CNN
+F 4 "MAX6955AAX+, LED Display Driver, 16-Digits 128-Segments, 2.7  5.5 V, 36-Pin SSOP" H 7000 3200 50  0001 L CNN "Description"
+F 5 "2.64" H 7000 3100 50  0001 L CNN "Height"
+F 6 "700-MAX6955AAX" H 7000 3000 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX6955AAX%2b/?qs=1THa7WoU59HHiplILEoAzQ%3D%3D" H 7000 2900 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Maxim Integrated" H 7000 2800 50  0001 L CNN "Manufacturer_Name"
+F 9 "MAX6955AAX+" H 7000 2700 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5850 3300
 	1    0    0    -1  
 $EndComp
 $Comp
 L SamacSys_Parts:HDSP-B03G DS1
 U 1 1 603F487A
-P 8450 3700
-F 0 "DS1" H 9900 3965 50  0000 C CNN
-F 1 "HDSP-B03G" H 9900 3874 50  0000 C CNN
-F 2 "HDSPB03G" H 11200 3800 50  0001 L CNN
-F 3 "https://docs.broadcom.com/docs/AV01-0698EN" H 11200 3700 50  0001 L CNN
-F 4 "LED Displays & Accessories 88:88 Clock Module 0.56in 4 Digits CC" H 11200 3600 50  0001 L CNN "Description"
-F 5 "8" H 11200 3500 50  0001 L CNN "Height"
-F 6 "630-HDSP-B03G" H 11200 3400 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Broadcom-Avago/HDSP-B03G/?qs=pQfy5%252BKCabJU4dELvEhWiw%3D%3D" H 11200 3300 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Avago Technologies" H 11200 3200 50  0001 L CNN "Manufacturer_Name"
-F 9 "HDSP-B03G" H 11200 3100 50  0001 L CNN "Manufacturer_Part_Number"
-	1    8450 3700
+P 8450 3350
+F 0 "DS1" H 9900 3615 50  0000 C CNN
+F 1 "HDSP-B03G" H 9900 3524 50  0000 C CNN
+F 2 "HDSPB03G" H 11200 3450 50  0001 L CNN
+F 3 "https://docs.broadcom.com/docs/AV01-0698EN" H 11200 3350 50  0001 L CNN
+F 4 "LED Displays & Accessories 88:88 Clock Module 0.56in 4 Digits CC" H 11200 3250 50  0001 L CNN "Description"
+F 5 "8" H 11200 3150 50  0001 L CNN "Height"
+F 6 "630-HDSP-B03G" H 11200 3050 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Broadcom-Avago/HDSP-B03G/?qs=pQfy5%252BKCabJU4dELvEhWiw%3D%3D" H 11200 2950 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Avago Technologies" H 11200 2850 50  0001 L CNN "Manufacturer_Name"
+F 9 "HDSP-B03G" H 11200 2750 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8450 3350
 	1    0    0    -1  
 $EndComp
 Text GLabel 2700 2050 2    50   Input ~ 0
@@ -1700,4 +1700,187 @@ F 9 "HDSP-B03G" H 11200 4200 50  0001 L CNN "Manufacturer_Part_Number"
 	1    8450 4800
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R13
+U 1 1 604802D6
+P 5600 4900
+F 0 "R13" V 5550 5100 50  0000 C CNN
+F 1 "110k" V 5650 5100 50  0000 C CNN
+F 2 "" V 5530 4900 50  0001 C CNN
+F 3 "~" H 5600 4900 50  0001 C CNN
+	1    5600 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 5000 5850 5000
+Wire Wire Line
+	5850 4800 5400 4800
+Wire Wire Line
+	5400 4800 5400 4900
+Wire Wire Line
+	5450 4900 5400 4900
+Wire Wire Line
+	5750 4900 5850 4900
+Connection ~ 5400 4900
+Wire Wire Line
+	5400 4900 5400 5000
+Wire Wire Line
+	14000 5250 14000 5350
+Connection ~ 14000 5250
+Connection ~ 14000 5350
+$Comp
+L Device:C C8
+U 1 1 604B302F
+P 7700 4900
+F 0 "C8" V 7550 4800 50  0000 C CNN
+F 1 "12pF" V 7550 5000 50  0000 C CNN
+F 2 "" H 7738 4750 50  0001 C CNN
+F 3 "~" H 7700 4900 50  0001 C CNN
+	1    7700 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7150 4800 7500 4800
+Wire Wire Line
+	7500 4800 7500 5000
+Wire Wire Line
+	7500 5000 7450 5000
+Wire Wire Line
+	7150 4900 7550 4900
+$Comp
+L power:GNDD #PWR064
+U 1 1 604EB109
+P 7450 5350
+F 0 "#PWR064" H 7450 5100 50  0001 C CNN
+F 1 "GNDD" H 7454 5195 50  0000 C CNN
+F 2 "" H 7450 5350 50  0001 C CNN
+F 3 "" H 7450 5350 50  0001 C CNN
+	1    7450 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR063
+U 1 1 604EB686
+P 5400 5000
+F 0 "#PWR063" H 5400 4750 50  0001 C CNN
+F 1 "GNDD" H 5404 4845 50  0000 C CNN
+F 2 "" H 5400 5000 50  0001 C CNN
+F 3 "" H 5400 5000 50  0001 C CNN
+	1    5400 5000
+	1    0    0    -1  
+$EndComp
+Connection ~ 5400 5000
+$Comp
+L Device:C C9
+U 1 1 604FBDA1
+P 7250 5150
+F 0 "C9" H 7450 5100 50  0000 C CNN
+F 1 "47µF" H 7450 5200 50  0000 C CNN
+F 2 "" H 7288 5000 50  0001 C CNN
+F 3 "~" H 7250 5150 50  0001 C CNN
+	1    7250 5150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 60504080
+P 7450 5150
+F 0 "C10" H 7650 5200 50  0000 C CNN
+F 1 "100nF" H 7700 5100 50  0000 C CNN
+F 2 "" H 7488 5000 50  0001 C CNN
+F 3 "~" H 7450 5150 50  0001 C CNN
+	1    7450 5150
+	1    0    0    -1  
+$EndComp
+Connection ~ 7450 5000
+Connection ~ 7250 5000
+Wire Wire Line
+	7250 5000 7450 5000
+Wire Wire Line
+	7150 5000 7250 5000
+Wire Wire Line
+	7250 5300 7450 5300
+Wire Wire Line
+	7450 5300 7450 5350
+Connection ~ 7450 5300
+Wire Wire Line
+	7450 5300 7850 5300
+Wire Wire Line
+	7850 5300 7850 4900
+Text GLabel 5750 3700 0    50   Input ~ 0
+PB10
+Wire Wire Line
+	5750 3700 5850 3700
+Text GLabel 5750 3600 0    50   Input ~ 0
+PB11
+Wire Wire Line
+	5750 3600 5850 3600
+Text GLabel 7250 4500 2    50   Input ~ 0
+O11
+Wire Wire Line
+	7150 4500 7250 4500
+Text GLabel 7250 4400 2    50   Input ~ 0
+O12
+Text GLabel 7250 4300 2    50   Input ~ 0
+O13
+Text GLabel 7250 4200 2    50   Input ~ 0
+O14
+Text GLabel 7250 4100 2    50   Input ~ 0
+O15
+Text GLabel 7250 4000 2    50   Input ~ 0
+O16
+Text GLabel 7250 3900 2    50   Input ~ 0
+O17
+Text GLabel 7250 3800 2    50   Input ~ 0
+O18
+Wire Wire Line
+	7250 4400 7150 4400
+Wire Wire Line
+	7250 4300 7150 4300
+Wire Wire Line
+	7250 4200 7150 4200
+Wire Wire Line
+	7250 4100 7150 4100
+Wire Wire Line
+	7250 4000 7150 4000
+Wire Wire Line
+	7250 3900 7150 3900
+Wire Wire Line
+	7250 3800 7150 3800
+Text GLabel 5750 4000 0    50   Input ~ 0
+O1
+Wire Wire Line
+	5750 4000 5850 4000
+Text GLabel 5750 4100 0    50   Input ~ 0
+O2
+Text GLabel 5750 4200 0    50   Input ~ 0
+O3
+Text GLabel 5750 4300 0    50   Input ~ 0
+O4
+Text GLabel 5750 4400 0    50   Input ~ 0
+O5
+Text GLabel 5750 4500 0    50   Input ~ 0
+O6
+Text GLabel 5750 4600 0    50   Input ~ 0
+O7
+Text GLabel 5750 4700 0    50   Input ~ 0
+O8
+Wire Wire Line
+	5750 4700 5850 4700
+Wire Wire Line
+	5750 4600 5850 4600
+Wire Wire Line
+	5750 4500 5850 4500
+Wire Wire Line
+	5750 4400 5850 4400
+Wire Wire Line
+	5750 4300 5850 4300
+Wire Wire Line
+	5750 4200 5850 4200
+Wire Wire Line
+	5750 4100 5850 4100
+Text GLabel 5750 3900 0    50   Input ~ 0
+O0
+Wire Wire Line
+	5750 3900 5850 3900
 $EndSCHEMATC
