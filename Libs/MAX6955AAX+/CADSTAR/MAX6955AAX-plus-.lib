@@ -1,0 +1,16 @@
+.MAX6955AAX-plus- :1 ;MAX6955AAX+, LED Display Driver, 16-Digits 128-Segments, 2.7  5.5 V, 36-Pin SSOP
+SOP80P1030X264-36N
+*STM IC
+*NGS
+*PLB 1="P0" 2="P1" 3="AD0" 4="SDA" 5="SCL" 6="AD1" 7="O0" 8="O1" 9="O2" 10="O3" 11="O4" 12="O5" 13="O6" 14="O7" 15="O8" 16="GND_1" 17="ISET" 18="GND_2" 19="V+_1" 20="OSC" 21="V+_2" 22="O9" 23="O10" 24="O11" 25="O12" 26="O13" 27="O14" 28="O15" 29="O16" 30="O17" 31="O18" 32="BLINK" 33="OSC_OUT" 34="P2" 35="P3" 36="P4/'IRQ'"
+*MXP 36
+*DFN MAX6955AAX-plus-
+~!Mouser Part Number (700-MAX6955AAX)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX6955AAX%2b/?qs=1THa7WoU59HHiplILEoAzQ%3D%3D)
+~!Manufacturer_Name (Maxim Integrated)
+~!Manufacturer_Part_Number (MAX6955AAX+)
+~!Link Datasheet (http://datasheets.maximintegrated.com/en/ds/MAX6955.pdf)
+~!Height (2.64mm)
+~!3D_Model (MAX6955AAX+)
+MAX6955AAX-plus-
+1.1!U 2.1!U 3.1!I 4.1!U 5.1!I 6.1!I 7.1!Y 8.1!Y 9.1!Y 10.1!Y 11.1!Y 12.1!Y 13.1!Y 14.1!Y 15.1!Y 16.1!P 17.1!U 18.1!G 36.1!U 35.1!U 34.1!U 33.1!Y 32.1!I 31.1!U 30.1!U 29.1!U 28.1!U 27.1!U 26.1!U 25.1!U 24.1!U 23.1!U 22.1!U 21.1!U 20.1!U 19.1!U 
