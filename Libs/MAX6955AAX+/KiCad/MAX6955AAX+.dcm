@@ -1,9 +1,0 @@
-EESchema-DOCLIB  Version 2.0
-#
-$CMP MAX6955AAX+
-D MAX6955AAX+, LED Display Driver, 16-Digits 128-Segments, 2.7  5.5 V, 36-Pin SSOP
-K
-F http://datasheets.maximintegrated.com/en/ds/MAX6955.pdf
-$ENDCMP
-#
-#End Doc Library
