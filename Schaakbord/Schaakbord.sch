@@ -875,23 +875,21 @@ Wire Wire Line
 Wire Wire Line
 	7150 7400 7350 7400
 Wire Wire Line
-	7350 7800 7450 7800
-Wire Wire Line
 	7350 7600 7350 7800
 $Comp
 L power:GNDD #PWR031
 U 1 1 6038D2B1
-P 7450 7800
-F 0 "#PWR031" H 7450 7550 50  0001 C CNN
-F 1 "GNDD" H 7454 7645 50  0000 C CNN
-F 2 "" H 7450 7800 50  0001 C CNN
-F 3 "" H 7450 7800 50  0001 C CNN
-	1    7450 7800
+P 7350 7800
+F 0 "#PWR031" H 7350 7550 50  0001 C CNN
+F 1 "GNDD" H 7354 7645 50  0000 C CNN
+F 2 "" H 7350 7800 50  0001 C CNN
+F 3 "" H 7350 7800 50  0001 C CNN
+	1    7350 7800
 	1    0    0    -1  
 $EndComp
-Connection ~ 7450 7800
+Connection ~ 7350 7800
 Wire Wire Line
-	7450 7800 7550 7800
+	7350 7800 7550 7800
 $Comp
 L power:+5V #PWR030
 U 1 1 6038D6EA
@@ -1686,18 +1684,18 @@ Wire Wire Line
 $Comp
 L SamacSys_Parts:HDSP-B03G DS2
 U 1 1 6048D73A
-P 8450 4800
-F 0 "DS2" H 9900 5065 50  0000 C CNN
-F 1 "HDSP-B03G" H 9900 4974 50  0000 C CNN
-F 2 "HDSPB03G" H 11200 4900 50  0001 L CNN
-F 3 "https://docs.broadcom.com/docs/AV01-0698EN" H 11200 4800 50  0001 L CNN
-F 4 "LED Displays & Accessories 88:88 Clock Module 0.56in 4 Digits CC" H 11200 4700 50  0001 L CNN "Description"
-F 5 "8" H 11200 4600 50  0001 L CNN "Height"
-F 6 "630-HDSP-B03G" H 11200 4500 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.co.uk/ProductDetail/Broadcom-Avago/HDSP-B03G/?qs=pQfy5%252BKCabJU4dELvEhWiw%3D%3D" H 11200 4400 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Avago Technologies" H 11200 4300 50  0001 L CNN "Manufacturer_Name"
-F 9 "HDSP-B03G" H 11200 4200 50  0001 L CNN "Manufacturer_Part_Number"
-	1    8450 4800
+P 8450 4400
+F 0 "DS2" H 9900 4665 50  0000 C CNN
+F 1 "HDSP-B03G" H 9900 4574 50  0000 C CNN
+F 2 "HDSPB03G" H 11200 4500 50  0001 L CNN
+F 3 "https://docs.broadcom.com/docs/AV01-0698EN" H 11200 4400 50  0001 L CNN
+F 4 "LED Displays & Accessories 88:88 Clock Module 0.56in 4 Digits CC" H 11200 4300 50  0001 L CNN "Description"
+F 5 "8" H 11200 4200 50  0001 L CNN "Height"
+F 6 "630-HDSP-B03G" H 11200 4100 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Broadcom-Avago/HDSP-B03G/?qs=pQfy5%252BKCabJU4dELvEhWiw%3D%3D" H 11200 4000 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Avago Technologies" H 11200 3900 50  0001 L CNN "Manufacturer_Name"
+F 9 "HDSP-B03G" H 11200 3800 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8450 4400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1863,10 +1861,6 @@ Text GLabel 5750 4500 0    50   Input ~ 0
 O6
 Text GLabel 5750 4600 0    50   Input ~ 0
 O7
-Text GLabel 5750 4700 0    50   Input ~ 0
-O8
-Wire Wire Line
-	5750 4700 5850 4700
 Wire Wire Line
 	5750 4600 5850 4600
 Wire Wire Line
@@ -1879,8 +1873,122 @@ Wire Wire Line
 	5750 4200 5850 4200
 Wire Wire Line
 	5750 4100 5850 4100
-Text GLabel 5750 3900 0    50   Input ~ 0
-O0
 Wire Wire Line
 	5750 3900 5850 3900
+Text GLabel 11450 3450 2    50   Input ~ 0
+O11
+Text GLabel 11450 4500 2    50   Input ~ 0
+O11
+Wire Wire Line
+	11450 3450 11350 3450
+Wire Wire Line
+	11450 4500 11350 4500
+Text GLabel 8350 3950 0    50   Input ~ 0
+O12
+Wire Wire Line
+	8350 3950 8450 3950
+Text GLabel 8350 5000 0    50   Input ~ 0
+O12
+Wire Wire Line
+	8350 5000 8450 5000
+Text GLabel 8350 3650 0    50   Input ~ 0
+O13
+Wire Wire Line
+	8350 3650 8450 3650
+Text GLabel 8350 4700 0    50   Input ~ 0
+O13
+Wire Wire Line
+	8350 4700 8450 4700
+Text GLabel 8350 4500 0    50   Input ~ 0
+O14
+Wire Wire Line
+	8350 4500 8450 4500
+Text GLabel 8350 3450 0    50   Input ~ 0
+O14
+Wire Wire Line
+	8450 3450 8350 3450
+Text GLabel 8350 3350 0    50   Input ~ 0
+O15
+Wire Wire Line
+	8350 3350 8450 3350
+Text GLabel 8350 4400 0    50   Input ~ 0
+O15
+Wire Wire Line
+	8350 4400 8450 4400
+Text GLabel 11450 4600 2    50   Input ~ 0
+O16
+Wire Wire Line
+	11350 4600 11450 4600
+Text GLabel 11450 3550 2    50   Input ~ 0
+O16
+Wire Wire Line
+	11450 3550 11350 3550
+Text GLabel 8350 3550 0    50   Input ~ 0
+O18
+Wire Wire Line
+	8350 3750 8450 3750
+Text GLabel 8350 4600 0    50   Input ~ 0
+O18
+Wire Wire Line
+	8350 4800 8450 4800
+Wire Wire Line
+	8350 3550 8450 3550
+Wire Wire Line
+	8350 4600 8450 4600
+Text GLabel 8350 3750 0    50   Input ~ 0
+O17
+Text GLabel 8350 4800 0    50   Input ~ 0
+O17
+Text GLabel 5750 3900 0    50   Input ~ 0
+O0
+Text GLabel 11450 3350 2    50   Input ~ 0
+O0
+Wire Wire Line
+	11450 3350 11350 3350
+Text GLabel 11450 3650 2    50   Input ~ 0
+O1
+Wire Wire Line
+	11350 3650 11450 3650
+Text GLabel 11450 3750 2    50   Input ~ 0
+O2
+Wire Wire Line
+	11350 3750 11450 3750
+Text GLabel 8350 3850 0    50   Input ~ 0
+O3
+Wire Wire Line
+	8350 3850 8450 3850
+Text GLabel 11450 4400 2    50   Input ~ 0
+O4
+Wire Wire Line
+	11350 4400 11450 4400
+Text GLabel 11450 4700 2    50   Input ~ 0
+O5
+Wire Wire Line
+	11350 4700 11450 4700
+Text GLabel 11450 4800 2    50   Input ~ 0
+O6
+Wire Wire Line
+	11350 4800 11450 4800
+Text GLabel 8350 4900 0    50   Input ~ 0
+O7
+Wire Wire Line
+	8350 4900 8450 4900
+$Comp
+L power:GNDD #PWR?
+U 1 1 605D0451
+P 5450 3800
+F 0 "#PWR?" H 5450 3550 50  0001 C CNN
+F 1 "GNDD" H 5454 3645 50  0000 C CNN
+F 2 "" H 5450 3800 50  0001 C CNN
+F 3 "" H 5450 3800 50  0001 C CNN
+	1    5450 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3800 5850 3800
+Wire Wire Line
+	5850 3500 5450 3500
+Wire Wire Line
+	5450 3500 5450 3800
+Connection ~ 5450 3800
 $EndSCHEMATC
