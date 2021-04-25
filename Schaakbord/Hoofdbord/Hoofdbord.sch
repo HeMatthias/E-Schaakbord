@@ -41,28 +41,6 @@ VSS1
 Text GLabel 8275 9875 3    50   Input ~ 0
 VSS4
 $Comp
-L power:+5V #PWR026
-U 1 1 6035833E
-P 12650 1600
-F 0 "#PWR026" H 12650 1450 50  0001 C CNN
-F 1 "+5V" H 12650 1750 50  0000 C CNN
-F 2 "" H 12650 1600 50  0001 C CNN
-F 3 "" H 12650 1600 50  0001 C CNN
-	1    12650 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDD #PWR027
-U 1 1 6035C316
-P 12850 1500
-F 0 "#PWR027" H 12850 1250 50  0001 C CNN
-F 1 "GNDD" H 12854 1345 50  0000 C CNN
-F 2 "" H 12850 1500 50  0001 C CNN
-F 3 "" H 12850 1500 50  0001 C CNN
-	1    12850 1500
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C10
 U 1 1 60366CCA
 P 10750 1400
@@ -126,8 +104,6 @@ Text GLabel 7675 6575 0    50   Input ~ 0
 BOOT0
 Wire Wire Line
 	8275 6175 8275 6125
-Wire Wire Line
-	12650 1600 12750 1600
 Wire Wire Line
 	11050 1200 11050 1225
 Wire Wire Line
@@ -209,8 +185,6 @@ Wire Wire Line
 	9275 9175 9175 9175
 Wire Wire Line
 	7675 6575 7775 6575
-Wire Wire Line
-	12750 1450 12750 1600
 Text GLabel 9675 1500 2    50   Input ~ 0
 BOOT0
 Text GLabel 8875 1500 0    50   Input ~ 0
@@ -665,7 +639,7 @@ Connection ~ 6550 1850
 Wire Wire Line
 	6550 1850 6350 1850
 Text GLabel 6875 1400 2    50   Input ~ 0
-µC
+PC0
 Wire Wire Line
 	6875 1400 6750 1400
 $Comp
@@ -749,26 +723,13 @@ Connection ~ 7700 1825
 Wire Wire Line
 	7700 1825 7500 1825
 Text GLabel 8025 1375 2    50   Input ~ 0
-µC
+PC1
 Wire Wire Line
 	8025 1375 7900 1375
 Wire Wire Line
 	7500 1425 7500 1375
 Wire Wire Line
 	9225 1500 9175 1500
-$Comp
-L Connector_Generic:Conn_01x02 J2
-U 1 1 607EC17C
-P 12750 1250
-F 0 "J2" V 12714 1062 50  0000 R CNN
-F 1 "5V_Power" V 12623 1062 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12750 1250 50  0001 C CNN
-F 3 "~" H 12750 1250 50  0001 C CNN
-	1    12750 1250
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	12850 1500 12850 1450
 Text Notes 6700 775  0    150  ~ 0
 Switch \n
 Wire Wire Line
@@ -1285,42 +1246,16 @@ F 3 "" H 4725 4775 50  0001 C CNN
 	1    4725 4775
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6125 4375 6125 4275
-$Comp
-L power:+5V #PWR011
-U 1 1 6096A2BE
-P 6125 4275
-F 0 "#PWR011" H 6125 4125 50  0001 C CNN
-F 1 "+5V" H 6140 4448 50  0000 C CNN
-F 2 "" H 6125 4275 50  0001 C CNN
-F 3 "" H 6125 4275 50  0001 C CNN
-	1    6125 4275
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6125 4775 6125 4675
-$Comp
-L power:GNDD #PWR012
-U 1 1 60958A03
-P 6125 4775
-F 0 "#PWR012" H 6125 4525 50  0001 C CNN
-F 1 "GNDD" H 6129 4620 50  0000 C CNN
-F 2 "" H 6125 4775 50  0001 C CNN
-F 3 "" H 6125 4775 50  0001 C CNN
-	1    6125 4775
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J1
 U 1 1 60957BA2
-P 6325 4475
-F 0 "J1" H 6405 4467 50  0000 L CNN
-F 1 "APA102C" H 6405 4376 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6325 4475 50  0001 C CNN
-F 3 "~" H 6325 4475 50  0001 C CNN
-	1    6325 4475
-	1    0    0    -1  
+P 6325 4575
+F 0 "J1" H 6405 4567 50  0000 L CNN
+F 1 "APA102C" H 6405 4476 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6325 4575 50  0001 C CNN
+F 3 "~" H 6325 4575 50  0001 C CNN
+	1    6325 4575
+	1    0    0    1   
 $EndComp
 Text GLabel 9275 9075 2    50   Input ~ 0
 PB10
@@ -1496,26 +1431,15 @@ Connection ~ 10750 1225
 Wire Wire Line
 	10750 1225 10750 1250
 $Comp
-L Connector_Generic:Conn_01x05 J3
-U 1 1 60A003D8
-P 2575 1550
-F 0 "J3" H 2655 1592 50  0000 L CNN
-F 1 "Rotary_Encoder" H 2655 1501 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 2575 1550 50  0001 C CNN
-F 3 "~" H 2575 1550 50  0001 C CNN
-	1    2575 1550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x04 J4
 U 1 1 60A15D6A
-P 1700 1475
-F 0 "J4" H 1780 1467 50  0000 L CNN
-F 1 "SWD" H 1780 1376 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1700 1475 50  0001 C CNN
-F 3 "~" H 1700 1475 50  0001 C CNN
-	1    1700 1475
-	1    0    0    -1  
+P 1700 1575
+F 0 "J4" H 1780 1567 50  0000 L CNN
+F 1 "SWD" H 1780 1476 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1700 1575 50  0001 C CNN
+F 3 "~" H 1700 1575 50  0001 C CNN
+	1    1700 1575
+	1    0    0    1   
 $EndComp
 Text GLabel 1350 1575 0    50   Input ~ 0
 PA13
@@ -1525,28 +1449,6 @@ Wire Wire Line
 	1500 1475 1350 1475
 Wire Wire Line
 	1500 1575 1350 1575
-$Comp
-L power:+3V3 #PWR031
-U 1 1 60A321C8
-P 1500 1375
-F 0 "#PWR031" H 1500 1225 50  0001 C CNN
-F 1 "+3V3" H 1500 1525 50  0000 C CNN
-F 2 "" H 1500 1375 50  0001 C CNN
-F 3 "" H 1500 1375 50  0001 C CNN
-	1    1500 1375
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDD #PWR032
-U 1 1 60A32673
-P 1500 1675
-F 0 "#PWR032" H 1500 1425 50  0001 C CNN
-F 1 "GNDD" H 1504 1520 50  0000 C CNN
-F 2 "" H 1500 1675 50  0001 C CNN
-F 3 "" H 1500 1675 50  0001 C CNN
-	1    1500 1675
-	1    0    0    -1  
-$EndComp
 Text GLabel 9325 7675 2    50   Input ~ 0
 PA13
 Text GLabel 9325 7775 2    50   Input ~ 0
@@ -1561,12 +1463,6 @@ Text GLabel 2275 1650 0    50   Input ~ 0
 PA2
 Text GLabel 2275 1550 0    50   Input ~ 0
 PA1
-Wire Wire Line
-	2275 1450 2375 1450
-Wire Wire Line
-	2275 1550 2375 1550
-Wire Wire Line
-	2275 1650 2375 1650
 Text GLabel 9275 6375 2    50   Input ~ 0
 PA0
 Text GLabel 9275 6575 2    50   Input ~ 0
@@ -1579,28 +1475,6 @@ Wire Wire Line
 	9175 6475 9275 6475
 Wire Wire Line
 	9175 6575 9275 6575
-$Comp
-L power:+5V #PWR033
-U 1 1 60ACC2EB
-P 2375 1350
-F 0 "#PWR033" H 2375 1200 50  0001 C CNN
-F 1 "+5V" H 2390 1523 50  0000 C CNN
-F 2 "" H 2375 1350 50  0001 C CNN
-F 3 "" H 2375 1350 50  0001 C CNN
-	1    2375 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDD #PWR034
-U 1 1 60ACC5BC
-P 2375 1750
-F 0 "#PWR034" H 2375 1500 50  0001 C CNN
-F 1 "GNDD" H 2379 1595 50  0000 C CNN
-F 2 "" H 2375 1750 50  0001 C CNN
-F 3 "" H 2375 1750 50  0001 C CNN
-	1    2375 1750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10750 1575 11050 1575
 Connection ~ 11650 1575
@@ -1663,4 +1537,138 @@ $EndComp
 Wire Wire Line
 	12200 1625 12200 1575
 Connection ~ 12200 1575
+Wire Wire Line
+	6125 4375 6125 4275
+Wire Wire Line
+	6125 4775 6125 4675
+$Comp
+L power:+5V #PWR011
+U 1 1 6096A2BE
+P 6125 4275
+F 0 "#PWR011" H 6125 4125 50  0001 C CNN
+F 1 "+5V" H 6140 4448 50  0000 C CNN
+F 2 "" H 6125 4275 50  0001 C CNN
+F 3 "" H 6125 4275 50  0001 C CNN
+	1    6125 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR012
+U 1 1 60958A03
+P 6125 4775
+F 0 "#PWR012" H 6125 4525 50  0001 C CNN
+F 1 "GNDD" H 6129 4620 50  0000 C CNN
+F 2 "" H 6125 4775 50  0001 C CNN
+F 3 "" H 6125 4775 50  0001 C CNN
+	1    6125 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 607EC17C
+P 12850 1250
+F 0 "J2" V 12814 1062 50  0000 R CNN
+F 1 "5V_Power" V 12723 1062 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12850 1250 50  0001 C CNN
+F 3 "~" H 12850 1250 50  0001 C CNN
+	1    12850 1250
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	12750 1450 12750 1600
+Wire Wire Line
+	12650 1600 12750 1600
+$Comp
+L power:+5V #PWR026
+U 1 1 6035833E
+P 12650 1600
+F 0 "#PWR026" H 12650 1450 50  0001 C CNN
+F 1 "+5V" H 12650 1750 50  0000 C CNN
+F 2 "" H 12650 1600 50  0001 C CNN
+F 3 "" H 12650 1600 50  0001 C CNN
+	1    12650 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12850 1500 12850 1450
+$Comp
+L power:GNDD #PWR027
+U 1 1 6035C316
+P 12850 1500
+F 0 "#PWR027" H 12850 1250 50  0001 C CNN
+F 1 "GNDD" H 12854 1345 50  0000 C CNN
+F 2 "" H 12850 1500 50  0001 C CNN
+F 3 "" H 12850 1500 50  0001 C CNN
+	1    12850 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR034
+U 1 1 60ACC5BC
+P 2375 1750
+F 0 "#PWR034" H 2375 1500 50  0001 C CNN
+F 1 "GNDD" H 2379 1595 50  0000 C CNN
+F 2 "" H 2375 1750 50  0001 C CNN
+F 3 "" H 2375 1750 50  0001 C CNN
+	1    2375 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR033
+U 1 1 608BD077
+P 2375 1350
+F 0 "#PWR033" H 2375 1200 50  0001 C CNN
+F 1 "+3V3" H 2375 1500 50  0000 C CNN
+F 2 "" H 2375 1350 50  0001 C CNN
+F 3 "" H 2375 1350 50  0001 C CNN
+	1    2375 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR031
+U 1 1 60A321C8
+P 1500 1375
+F 0 "#PWR031" H 1500 1225 50  0001 C CNN
+F 1 "+3V3" H 1500 1525 50  0000 C CNN
+F 2 "" H 1500 1375 50  0001 C CNN
+F 3 "" H 1500 1375 50  0001 C CNN
+	1    1500 1375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR032
+U 1 1 60A32673
+P 1500 1675
+F 0 "#PWR032" H 1500 1425 50  0001 C CNN
+F 1 "GNDD" H 1504 1520 50  0000 C CNN
+F 2 "" H 1500 1675 50  0001 C CNN
+F 3 "" H 1500 1675 50  0001 C CNN
+	1    1500 1675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2275 1450 2375 1450
+Wire Wire Line
+	2275 1550 2375 1550
+Wire Wire Line
+	2275 1650 2375 1650
+$Comp
+L Connector_Generic:Conn_01x05 J3
+U 1 1 60A003D8
+P 2575 1550
+F 0 "J3" H 2655 1592 50  0000 L CNN
+F 1 "Rotary_Encoder" H 2655 1501 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 2575 1550 50  0001 C CNN
+F 3 "~" H 2575 1550 50  0001 C CNN
+	1    2575 1550
+	1    0    0    1   
+$EndComp
+Text GLabel 7700 8075 0    50   Input ~ 0
+PC0
+Text GLabel 7700 8175 0    50   Input ~ 0
+PC1
+Wire Wire Line
+	7775 8175 7700 8175
+Wire Wire Line
+	7775 8075 7700 8075
 $EndSCHEMATC

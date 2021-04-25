@@ -904,17 +904,6 @@ Wire Wire Line
 Wire Wire Line
 	10550 3750 10750 3750
 $Comp
-L Connector_Generic:Conn_01x04 J2
-U 1 1 6087E1CF
-P 10950 3950
-F 0 "J2" H 11030 3942 50  0000 L CNN
-F 1 "Conn_01x04" H 11030 3851 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 10950 3950 50  0001 C CNN
-F 3 "~" H 10950 3950 50  0001 C CNN
-	1    10950 3950
-	1    0    0    1   
-$EndComp
-$Comp
 L Device:C_Small C5
 U 1 1 607CBE31
 P 8300 5650
@@ -1135,17 +1124,6 @@ F 3 "" H 5500 4050 50  0001 C CNN
 	1    5500 4050
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J1
-U 1 1 6072E135
-P 5150 3950
-F 0 "J1" H 5230 3942 50  0000 L CNN
-F 1 "Conn_01x04" H 5230 3851 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Horizontal" H 5150 3950 50  0001 C CNN
-F 3 "~" H 5150 3950 50  0001 C CNN
-	1    5150 3950
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	5350 3750 5550 3750
 Wire Wire Line
@@ -1284,28 +1262,6 @@ $EndComp
 Text GLabel 11350 6500 0    50   Input ~ 0
 QH
 $Comp
-L Connector_Generic:Conn_01x05 J4
-U 1 1 60A52C76
-P 11550 6500
-F 0 "J4" H 11468 6075 50  0000 C CNN
-F 1 "Conn_01x05" H 11468 6166 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Horizontal" H 11550 6500 50  0001 C CNN
-F 3 "~" H 11550 6500 50  0001 C CNN
-	1    11550 6500
-	1    0    0    1   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x05 J3
-U 1 1 60A596AF
-P 11550 5700
-F 0 "J3" H 11468 5275 50  0000 C CNN
-F 1 "Conn_01x05" H 11468 5366 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Horizontal" H 11550 5700 50  0001 C CNN
-F 3 "~" H 11550 5700 50  0001 C CNN
-	1    11550 5700
-	1    0    0    1   
-$EndComp
-$Comp
 L power:+3V3 #PWR049
 U 1 1 609D20D0
 P 11050 6650
@@ -1322,4 +1278,48 @@ Wire Wire Line
 	11200 6650 11200 6600
 Wire Wire Line
 	11050 6650 11200 6650
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 6072E135
+P 5150 3950
+F 0 "J1" H 5230 3942 50  0000 L CNN
+F 1 "Conn_01x04" H 5230 3851 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 5150 3950 50  0001 C CNN
+F 3 "~" H 5150 3950 50  0001 C CNN
+	1    5150 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 6087E1CF
+P 10950 3950
+F 0 "J2" H 11030 3942 50  0000 L CNN
+F 1 "Conn_01x04" H 11030 3851 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Horizontal" H 10950 3950 50  0001 C CNN
+F 3 "~" H 10950 3950 50  0001 C CNN
+	1    10950 3950
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J3
+U 1 1 60A596AF
+P 11550 5700
+F 0 "J3" H 11468 5275 50  0000 C CNN
+F 1 "Conn_01x05" H 11468 5366 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Horizontal" H 11550 5700 50  0001 C CNN
+F 3 "~" H 11550 5700 50  0001 C CNN
+	1    11550 5700
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J4
+U 1 1 60A52C76
+P 11550 6500
+F 0 "J4" H 11468 6075 50  0000 C CNN
+F 1 "Conn_01x05" H 11468 6166 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Horizontal" H 11550 6500 50  0001 C CNN
+F 3 "~" H 11550 6500 50  0001 C CNN
+	1    11550 6500
+	1    0    0    1   
+$EndComp
 $EndSCHEMATC
