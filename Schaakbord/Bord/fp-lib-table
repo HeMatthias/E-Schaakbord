@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name Schaakbord_Bord)(type KiCad)(uri ${KIPRJMOD}/Schaakbord_Bord.pretty)(options "")(descr ""))
-)
