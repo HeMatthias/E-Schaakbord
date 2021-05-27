@@ -54,15 +54,16 @@ I2C_HandleTypeDef hi2c2;
 
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
+TIM_HandleTypeDef htim4;
 
 /* USER CODE BEGIN PV */
-// uint8_t buf[15];
-uint8_t secondenR = 3;
+uint8_t buf[15];
+uint8_t secondenR = 5;
 uint8_t TsecondenR = 0;
 uint8_t minutenR = 0;
 uint8_t TminutenR = 0;
 
-uint8_t secondenL = 3;
+uint8_t secondenL = 5;
 uint8_t TsecondenL = 0;
 uint8_t minutenL = 0;
 uint8_t TminutenL = 0;
@@ -76,6 +77,7 @@ static void MX_I2C2_Init(void);
 static void MX_I2C1_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM2_Init(void);
+static void MX_TIM4_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -84,9 +86,9 @@ static void MX_TIM2_Init(void);
 /* USER CODE BEGIN 0 */
 void SysTickDelayCount2(unsigned long ulCount){
     CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
-    ITM->LAR = 0xC5ACCE55;
-    DWT->CYCCNT = 0;
-    DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
+    ITM->LAR = 0xC5ACCE55; // Unlock de counter
+    DWT->CYCCNT = 0; // Reset de cycle counter
+    DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk; // Enable/start de counter
 
     while(DWT->CYCCNT < ulCount);
 }
@@ -122,11 +124,13 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C2_Init();
   MX_I2C1_Init();
-  MX_TIM2_Init();
   MX_TIM3_Init();
+  MX_TIM2_Init();
+  MX_TIM4_Init();
   /* USER CODE BEGIN 2 */
   // 7-segment aansturen in test stand
 	  SS_Start(0);
+
 	  SS_Schrijf(0, TminutenR, 1);
 	  SS_Schrijf(1, minutenR, 1);
 	  SS_Schrijf(2, TsecondenR, 1);
@@ -146,7 +150,7 @@ int main(void)
 	  }
 	  HAL_Delay(5000);
 
-
+	  HAL_TIM_Encoder_Start(&htim2, TIM_CHANNEL_ALL);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -156,10 +160,16 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  	  Meten();
-	  	  HAL_Delay(1);
-	  	  Controle();
-	  	  HAL_Delay(1);
+	  minutenR = ((TIM2->CNT)<1);
+
+	  Meten();
+	  minutenR = ((TIM2->CNT)<1);
+	  HAL_Delay(1);
+
+	  Controle();
+	  minutenR = ((TIM2->CNT)<1);
+	  HAL_Delay(1);
+
   }
   /* USER CODE END 3 */
 }
@@ -281,24 +291,28 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 0 */
 
-  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_Encoder_InitTypeDef sConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
 
   /* USER CODE BEGIN TIM2_Init 1 */
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 3600;
+  htim2.Init.Prescaler = 0;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 10075;
+  htim2.Init.Period = 19;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
-  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  sConfig.EncoderMode = TIM_ENCODERMODE_TI12;
+  sConfig.IC1Polarity = TIM_ICPOLARITY_RISING;
+  sConfig.IC1Selection = TIM_ICSELECTION_DIRECTTI;
+  sConfig.IC1Prescaler = TIM_ICPSC_DIV1;
+  sConfig.IC1Filter = 0;
+  sConfig.IC2Polarity = TIM_ICPOLARITY_RISING;
+  sConfig.IC2Selection = TIM_ICSELECTION_DIRECTTI;
+  sConfig.IC2Prescaler = TIM_ICPSC_DIV1;
+  sConfig.IC2Filter = 0;
+  if (HAL_TIM_Encoder_Init(&htim2, &sConfig) != HAL_OK)
   {
     Error_Handler();
   }
@@ -360,6 +374,51 @@ static void MX_TIM3_Init(void)
 }
 
 /**
+  * @brief TIM4 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM4_Init(void)
+{
+
+  /* USER CODE BEGIN TIM4_Init 0 */
+
+  /* USER CODE END TIM4_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM4_Init 1 */
+
+  /* USER CODE END TIM4_Init 1 */
+  htim4.Instance = TIM4;
+  htim4.Init.Prescaler = 3600;
+  htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim4.Init.Period = 10075;
+  htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  if (HAL_TIM_Base_Init(&htim4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim4, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim4, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM4_Init 2 */
+
+  /* USER CODE END TIM4_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -416,7 +475,7 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	if (htim == &htim2){
+	if (htim == &htim4){
 		if (secondenR != 0){
 			secondenR--;
 		} else if (TsecondenR != 0){
@@ -500,13 +559,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 	if (GPIO_Pin == SWR_Pin){
-		HAL_TIM_Base_Stop_IT(&htim2);
+		HAL_TIM_Base_Stop_IT(&htim4);
 		HAL_TIM_Base_Start_IT(&htim3);
 	}
 
 	if (GPIO_Pin == SWL_Pin){
 		HAL_TIM_Base_Stop_IT(&htim3);
-		HAL_TIM_Base_Start_IT(&htim2);
+		HAL_TIM_Base_Start_IT(&htim4);
 	}
 }
 /* USER CODE END 4 */
